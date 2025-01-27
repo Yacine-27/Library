@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Smooch+Sans:wght@100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: "Smooch Sans";
+  color: var(--font-color);
+}
+
+:root {
+  --main-background: #1e201e;
+  --header-background: #3c3d37;
+  --font-color: #ecdfcc;
+  --confirm-color: #5b913b;
+}
+
+body {
+  background-color: var(--main-background);
+}
+
+header {
+  height: 15vh;
+  background-color: var(--header-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+header > span > svg {
+  max-height: 10rem;
+}
+
+.books {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  gap: 3.5rem;
+  position: relative;
+}
+
+.book {
+  background-color: var(--header-background);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 0.2rem var(--font-color) solid;
+  width: min(800px, 80vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.description,
+.read-button {
+  width: 70%;
+  text-align: center;
+}
+
+.description {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Inter";
+}
+
+.title {
+  font-size: 2.5rem;
+}
+
+.pages {
+  font-size: 2.5rem;
+}
+
+.read-button {
+  max-width: 120px;
+  min-height: 4rem;
+  background-color: var(--main-background);
+  border: none;
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.08rem;
+  cursor: pointer;
+}
+
+.read-button:hover,
+.add-button:hover {
+  transform: scale(1.1);
+  background-color: var(--confirm-color);
+}
+
+.add-button {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: var(--header-background);
+  font-size: 8rem;
+  border: 0.4rem solid var(--font-color);
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  position: relative;
+  background-color: var(--header-background);
+  border: 1px solid #d6d9dc;
+  border-radius: 3px;
+  width: 60%;
+  padding: 50px;
+  margin: 40px 0 40px 0;
+  max-width: 500px;
+}
+
+.widget {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.widget:not(button[type="submit"]) {
+  margin-bottom: 20px;
+}
+
+button[type="submit"] {
+  border: 0.1rem solid var(--font-color);
+}
+
+.widget input[type="text"],
+.widget input[type="number"] {
+  background-color: var(--main-background);
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+  padding: 7px;
+  font-size: 1.6rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.widget input:focus {
+  outline: none;
+}
+
+.widget label {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.widget button:not(button[type="submit"]) {
+  border: none;
+}
+
+.widget button {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--main-background);
+  border-radius: 3px;
+  padding: 10px 40px;
+  cursor: pointer;
+  width: fit-content;
+  align-self: center;
+}
+
+.widget button:hover {
+  transform: scale(1.1);
+  background-color: var(--confirm-color);
+}
+
+.close-form {
+  position: absolute;
+  background-color: inherit;
+  border: none;
+  height: 3rem;
+  width: 3rem;
+  font-size: 2rem;
+  background-color: var(--main-background);
+  border-radius: 50%;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.close-form:hover {
+  transform: scale(1.1);
+}
+
+.legacy-widget {
+  border: none;
+  margin-bottom: 60px;
+}
+
+.legacy-widget legend {
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.legacy-widget .radio-label {
+  display: block;
+  padding: 0 20px 0 10px;
+}
+
+.legacy-widget input[type="radio"] {
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.legacy-widget .radio-label,
+.legacy-widget input[type="radio"] {
+  float: left;
+  font-size: 1.7rem;
+}
+.book.read {
+  background-color: #5b913b;
+}
+
+.read-button.read:hover {
+  background-color: #3c3d37;
+}
+
+.remove-book {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  font-size: 1.6rem;
+  background-color: var(--main-background);
+  border: none;
+  padding: 1.2rem;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+}
+
+.remove-book:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}

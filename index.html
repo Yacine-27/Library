@@ -3,10 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Library</title>
+    <title>LibCare</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <header>
+      <span class="logo">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 200 200"
+          width="100"
+          height="100"
+          fill="none"
+        >
+          <path
+            d="M50 150 Q75 130 100 150 Q125 130 150 150 L150 60 Q125 40 100 60 Q75 40 50 60 Z"
+            fill="#3c3d37"
+            stroke="#fff"
+            stroke-width="3"
+          />
+
+          <circle
+            cx="140"
+            cy="40"
+            r="20"
+            fill="#3c3d37"
+            stroke="#EEEEEE"
+            stroke-width="3"
+          />
+          <line
+            x1="153"
+            y1="53"
+            x2="170"
+            y2="70"
+            stroke="#EEE"
+            stroke-width="3"
+          />
+
+          <rect x="120" y="20" width="6" height="6" fill="#EEEEEE" />
+          <rect x="130" y="10" width="6" height="6" fill="#EEEEEE" />
+          <rect x="110" y="30" width="6" height="6" fill="#EEEEEE" />
+        </svg>
+      </span>
+      LibCare
+    </header>
+    <main>
+      <div class="books"></div>
+      <button class="add-button">+</button>
+      <form action="" class="hidden">
+        <button class="close-form" type="button">X</button>
+        <div class="widget">
+          <label for="title">Title</label>
+          <input type="text" id="title" name="title" required />
+        </div>
+        <div class="widget">
+          <label for="author">Author</label>
+          <input type="text" id="author" name="author" required />
+        </div>
+        <div class="widget">
+          <label for="pages">Pages</label>
+          <input type="number" id="pages" name="pages" required />
+        </div>
+        <div class="widget">
+          <label for="description">description</label>
+          <input type="text" id="description" name="description" required />
+        </div>
+
+        <div class="legacy-widget">
+          <legend>Read it yet ?</legend>
+          <input
+            type="radio"
+            name="is-read"
+            id="not-read"
+            value="notRead"
+            checked
+          />
+          <label for="not-read" class="radio-label">Not Read Yet</label>
+          <input type="radio" name="is-read" id="read" value="read" />
+          <label for="read" class="radio-label">Already Read</label>
+        </div>
+        <div class="widget">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </main>
     <script src="./script.js"></script>
   </body>
 </html>
